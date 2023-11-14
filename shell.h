@@ -39,8 +39,8 @@ extern char **environ;
  * struct list - this is a singly inked list
  * @NUM: this is the number field
  * @strr: this is a string
- * #nxt: it points to the next code
- * */
+ * @nxt: it points to the next code
+ */
 typedef struct list
 {
 	int NUM;
@@ -50,13 +50,12 @@ typedef struct list
 list_t;
 
 /**
- * struct pseudopass - this contains pseudo-arguments for function pointer struct, thus allowing uniform prototype for function pointer struct.
+ * struct pseudopass - contains pseudo-arguments for function pointer struct,
+ * thus allowing uniform prototype for function pointer struct.
  * @argu: this is a string generated from getline containing some arguments
  * @arg1: array of strings generated from argu
  * @strpath: this is a string path for the current command
  * @argC: Argument count
- * @err_count: this is the error count
- * @err_cod: this is the error code for exit
  * @countline: if on count this line of Input
  * @prname: this is the program filename
  * @envi: the linked list copy for environ

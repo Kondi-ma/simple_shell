@@ -3,7 +3,7 @@
 /**
  * s_int - This converts a string into an integer
  * @c: This is the string to be converted
- * Return: 0 if there are no numbers in the string, converted number otherwise -1 on error
+ * Return: 0 if no nums in the string, converted num otherwise -1 on error
  */
 int s_int(char *c)
 {
@@ -70,9 +70,9 @@ int dprint(int in, int f)
 	curr = abs;
 	for (a = 200000000; a > 1; a /= 10)
 	{
-		if (abs/a)
+		if (abs / a)
 		{
-			putC('0' +curr / a);
+			putC('0' + curr / a);
 			ct++;
 		}
 		curr %= a;

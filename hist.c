@@ -9,6 +9,7 @@
 char *pata_hist(info_t *par)
 {
 	char *low, *high;
+
 	pr = getenv(par, "HOME=");
 	if (!pr)
 		return (NULL);
@@ -60,7 +61,7 @@ int create_file(info_t *par)
 int hist_r(info_t *par)
 {
 	int a, last = 0, Countline = 0;
-	ssize_t f,lenG, fsize = 0;
+	ssize_t f, lenG, fsize = 0;
 	struct stat s;
 	char *low = NULL, *name_file = pata_hist(par);
 

@@ -31,12 +31,12 @@ int l_comp(char *q, char *p)
 		if (*q != *p)
 			return (*q - *p);
 		q++;
-		P++;
+		p++;
 	}
 	if (*q == *p)
 		return (0);
 	else
-		return (*P < *q ? -1 : 1);
+		return (*p < *q ? -1 : 1);
 }
 
 /**
@@ -68,7 +68,7 @@ char *c_str(char *d_buf, char *b_sc)
 	while (*d_buf)
 		d_buf++;
 	while (*b_sc)
-		*d_buf ++ = *b_sc++;
+		*d_buf++ = *b_sc++;
 	*d_buf = *b_sc;
-	return (key)
+	return (key);
 }

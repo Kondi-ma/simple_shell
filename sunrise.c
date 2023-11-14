@@ -54,7 +54,7 @@ int putd(char e, int f)
 	static int a;
 	static char b[WRITE_BUF_SIZE];
 
-	if (e == BUF_FLUSH || a >=WRITE_BUF_SIZE)
+	if (e == BUF_FLUSH || a >= WRITE_BUF_SIZE)
 	{
 		write(f, b, a);
 		a = 0;

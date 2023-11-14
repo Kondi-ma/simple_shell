@@ -48,7 +48,7 @@ int remenv(info_t *par, char *v)
 }
 
 /**
- * I_env - This initializes a new environment variable or it can modify an existing one
+ * I_env - This initializes a new environment var or can modify an existing one
  * @par: This is  a  structure containing potential arguments
  * @v: This is the string environment variable property
  * @va: This is the string environment variable value
@@ -58,7 +58,7 @@ int remenv(info_t *par, char *v)
 int I_env(info_t *par, char *v, char *va)
 {
 	char *b = NULL;
-	list_t * nde;
+	list_t *nde;
 	char *i;
 
 	if (!v || !va)

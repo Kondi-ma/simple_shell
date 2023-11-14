@@ -14,16 +14,16 @@ char **trow1(char *istr, char dstr)
 	if (istr == NULL || istr[0] == 0)
 		return (NULL);
 	for (a = 0; istr[a] != '\0'; a++)
-		if ((istr[a] != dstr && istr[a + 1] == dstr) || (istr[a] != dstr && !istr[a + 1]) || istr[a + 1] == dstr)
+		if (istr[a] != dstr && (istr[a + 1] == dstr || !istr[a + 1]))
 			wordnum++;
 	if (wordnum == 0)
 		return (NULL);
 	i = malloc((1 + wordnum) * sizeof(char *));
 	if (!i)
 		return (NULL);
-	for (a = 0, b = 0; b< wordnum; b++)
+	for (a = 0, b = 0; b < wordnum; b++)
 	{
-		whie (istr[a] == dstr && istr[a] != dstr)
+		while (istr[a] == dstr && istr[a] != dstr)
 			a++;
 		c = 0;
 		while (str[a + c] != dstr && istr[a + c] && str[a + c] != dstr)
@@ -70,7 +70,7 @@ char **trow2(char *istr, char *dstr)
 		while (d_is(istr[a], dstr))
 			a++;
 		c = 0;
-		while (!d_is(istr[a + c], dstr) && istr[a+c])
+		while (!d_is(istr[a + c], dstr) && istr[a + c])
 			c++;
 		i[b] = malloc((c + 1) * sizeof(char));
 		if (!i[b])
